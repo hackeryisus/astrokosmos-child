@@ -49,7 +49,7 @@ function child_theme_init() {
 
 function woa_add_full_slider() { ?>
 	<div id="slider">
-		<?php echo do_shortcode("[metaslider id=388 percentwidth=100]"); ?>
+		<?php echo do_shortcode("[metaslider id=10 percentwidth=100]"); ?>
 	</div>
 <?php
 }

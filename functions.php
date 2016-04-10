@@ -34,7 +34,10 @@ function storefront_add_topbar() {
     ?>
     <div id="topbar">
         <div class="col-full">
-            <p>Welcome <?php echo $user ?>!</p>
+            <i class="header-number--green fa fa-whatsapp"></i>
+            <p>
+              +521 222 516 0533
+            </p>
         </div>
     </div>
     <?php
@@ -49,7 +52,11 @@ function child_theme_init() {
 
 function woa_add_full_slider() { ?>
 	<div id="slider">
-		<?php echo do_shortcode("[metaslider id=10 percentwidth=100]"); ?>
+    <?php
+      if (is_front_page() || is_home()) {
+        echo do_shortcode("[metaslider id=10 percentwidth=100]"); //replace 123 with slider ID
+      }
+      ?>
 	</div>
 <?php
 }

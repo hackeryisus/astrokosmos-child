@@ -51,22 +51,167 @@ ul.products li.product .onsale {
 
 @media screen and (min-width: 768px) {
     /* LOGO */
-    .site-header .site-branding, .site-header .site-logo-anchor, .site-header .site-logo-link { width: 30% !important; /* Use px values if you want, eg. 350px */ }
+  .site-header .site-branding, .site-header .site-logo-anchor, .site-header .site-logo-link {
+    width: 30% !important;
+  }
 
     /* SECONDARY NAVIGATION */
-    .site-header .secondary-navigation { width: 40% !important;  /* Use px values if you want, eg. 350px */ }
+  .site-header .secondary-navigation {
+    width: 40% !important;
+  }
 
-    /* SEARCH BAR */
-    .site-header .site-search { width: 30% !important;  /* Use px values if you want, eg. 350px */ }
+  /* SEARCH BAR */
+  .site-header .site-search {
+    width: 30% !important;
+    height: 5%;
+  }
 }
 body.woocommerce #primary { width: 100%; }
 
+.home.blog .site-header,
+.home.page:not(.page-template-template-homepage) .site-header,
+.home.post-type-archive-product .site-header {
+  margin-bottom: 0; }
+
 #topbar {
-    background-color: #1F1F20;
-    height: 40px;
-    line-height: 40px;
+    background-color: #4c6578;
+    height: 30px;
+    line-height: 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 #topbar p {
     color: #fff;
 }
+
+
+/**
+ * Extras
+ */
+
+.row {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+.col-xs,.col-xs-1,.col-xs-2,
+.col-xs-3,.col-xs-4,.col-xs-5,
+.col-xs-6,.col-xs-7,.col-xs-8,
+.col-xs-9,.col-xs-10,.col-xs-11,
+.col-xs-12 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.col-xs-12 {
+  -ms-flex-preferred-size: 100%;
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.center-xs {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media only screen and (min-width: 48em) {
+  .center-sm {
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+  .bottom-sm {
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    -webkit-box-align: end;
+    align-items: flex-end;
+  }
+
+  .col-sm,
+    .col-sm-1,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12 {
+      box-sizing: border-box;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      -webkit-box-flex: 0;
+      flex: 0 0 auto;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+
+  .col-sm-4 {
+      -ms-flex-preferred-size: 33.333%;
+      -webkit-flex-basis: 33.333%;
+      flex-basis: 33.333%;
+      max-width: 33.333%;
+    }
+}
+
+
+
+
+.header-number{font-size:1.3em;margin-left:1rem}.header-number--green{color:#0f9d58;font-size:1.7em}
+.header-btn-nav{background-color:#0f3a69;font-size:18px;border:0;border-radius:.4em;color:#fff;margin-top:1em}
+.header-menu-navbar{background-color:#0f3a69;text-align:center}
+}}
+.contactbar{margin-top:10%}
+.contactbar-item{margin:0;list-style:none}
+.contactbar-item a{color:#fff;font-size:5em}
+#footer{background-color:rgba(38,76,116,.8)}
+#footer h3{color:#fff;font-weight:700}
+#footer-newsletter{padding-left:1.5em}
+#footer-direcction{font-weight:300}
+#footer-copyright{color:#fff;background-color:rgba(18,56,96,.8);font-size:9px;text-align:center}
+.home-section{font-weight:300;
+  }
+.home-section h3{font-size:2em}
+.home-section-item{
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  justify-content: center;
+  text-align: center;
+}
+.home-section-item img{max-width:200px;height:auto;
+  margin: 0 auto;
+  padding:0 0em}

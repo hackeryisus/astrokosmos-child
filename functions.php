@@ -19,24 +19,26 @@
 
 ?>
 
+<!-- Awesome fonts -->
+<?php add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
+function enqueue_font_awesome() {
+
+	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' );
+
+} ?>
+
 <?php
 /**
  * Adds a top bar to Storefront, before the header.
  */
 function storefront_add_topbar() {
-    global $current_user;
-    get_currentuserinfo();
-    if ( ! empty( $current_user->user_firstname ) ) {
-        $user = $current_user->user_firstname;
-    } else {
-        $user = __( 'guest', 'storefront-child' );
-    }
     ?>
     <div id="topbar">
-        <div class="col-full">
-            <i class="header-number--green fa fa-whatsapp"></i>
+        <div class="col-full center-xs">
             <p>
-              +521 222 516 0533
+              Contactanos en: <a href="mailto:contacto@astrokosmos.com.mx?subject=Informacion sobre astrokosmos">contacto@astrokosmos.com.mx</a>
+              o al <i class="header-number--green fa fa-whatsapp"></i> <a href="intent://send/5212225160533#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end">+521 222 516 0533</a>
+
             </p>
         </div>
     </div>

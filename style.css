@@ -141,6 +141,12 @@ body.woocommerce #primary { width: 100%; }
   text-align: center;
 }
 
+.around-xs {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
 @media only screen and (min-width: 48em) {
   .center-sm {
       -webkit-justify-content: center;
@@ -185,6 +191,76 @@ body.woocommerce #primary { width: 100%; }
       flex-basis: 33.333%;
       max-width: 33.333%;
     }
+
+  .col-sm-6 {
+    -ms-flex-preferred-size: 50%;
+    -webkit-flex-basis: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .container {
+    width: 61rem;
+  }
+
+  .start-md {
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+
+
+}
+@media only screen and (min-width: 75em) {
+  .container {
+    width: 71rem;
+  }
+
+  .col-lg,
+  .col-lg-1,
+  .col-lg-2,
+  .col-lg-3,
+  .col-lg-4,
+  .col-lg-5,
+  .col-lg-6,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-9,
+  .col-lg-10,
+  .col-lg-11,
+  .col-lg-12 {
+    box-sizing: border-box;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .col-lg {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    -webkit-flex-basis: 0;
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+  .col-lg-4 {
+   -ms-flex-preferred-size: 33.333%;
+   -webkit-flex-basis: 33.333%;
+   flex-basis: 33.333%;
+   max-width: 33.333%;
+ }
+
 }
 
 
@@ -201,7 +277,16 @@ body.woocommerce #primary { width: 100%; }
 #footer h3{color:#fff;font-weight:700}
 #footer-newsletter{padding-left:1.5em}
 #footer-direcction{font-weight:300}
-#footer-copyright{color:#fff;background-color:rgba(18,56,96,.8);font-size:9px;text-align:center}
+#footer-copyright{
+  color:#fff;
+  background-color:#123860;
+  font-size:11px;
+  text-align:center;
+  padding-top: 1em;
+  line-height: 2px;
+  position: absolute;
+  bottom: auto;
+}
 .home-section{font-weight:300;
   }
 .home-section h3{font-size:2em}

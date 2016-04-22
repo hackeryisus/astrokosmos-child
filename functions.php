@@ -28,23 +28,6 @@ function enqueue_font_awesome() {
 } ?>
 
 <?php
-/**
- * Adds a top bar to Storefront, before the header.
- */
-function storefront_add_topbar() {
-    ?>
-    <div id="topbar">
-        <div class="col-full center-xs">
-            <p>
-              Contactanos en: <a href="mailto:contacto@astrokosmos.com.mx?subject=Informacion sobre astrokosmos">contacto@astrokosmos.com.mx</a>
-              o al <i class="header-number--green fa fa-whatsapp"></i> <a href="intent://send/5212225160533#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end">+521 222 516 0533</a>
-
-            </p>
-        </div>
-    </div>
-    <?php
-}
-add_action( 'storefront_before_header', 'storefront_add_topbar' );
 
 /**Meta slider**/
 add_action( 'init', 'child_theme_init' );

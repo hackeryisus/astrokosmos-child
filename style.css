@@ -64,6 +64,11 @@ ul.products li.product .onsale {
   .site-header .site-search {
     width: 30% !important;
     height: 5%;
+
+  }
+  .site-search .widget_product_search input[type=search], .site-search .widget_product_search input[type=text] {
+    background: transparent url(http://www.meade.com/skin/frontend/meade/default/images/search-bg.png) no-repeat 0 0;
+    
   }
 }
 body.woocommerce #primary { width: 100%; }

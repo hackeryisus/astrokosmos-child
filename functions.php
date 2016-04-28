@@ -19,15 +19,13 @@
 
 ?>
 
-<!-- Awesome fonts -->
-<?php add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
+<?php
+add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
 function enqueue_font_awesome() {
 
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' );
 
-} ?>
-
-<?php
+}
 
 /**Meta slider**/
 add_action( 'init', 'child_theme_init' );
@@ -44,21 +42,4 @@ function woa_add_full_slider() { ?>
       ?>
 	</div>
 <?php
-}
-
-
-/**Remove credits**/
-add_action( 'init', 'custom_remove_footer_credit', 10 );
-
-function custom_remove_footer_credit () {
-    remove_action( 'storefront_footer', 'storefront_credit', 20 );
-    add_action( 'storefront_footer', 'custom_storefront_credit', 20 );
-}
-
-function custom_storefront_credit() {
-	?>
-	<div class="site-info">
-		&copy; <?php echo get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ); ?>
-	</div><!-- .site-info -->
-	<?php
 }
